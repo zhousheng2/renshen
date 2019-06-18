@@ -1,0 +1,19 @@
+server:
+  port:  9000
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: yangjia2019
+        url: jdbc:mysql://121.41.95.194:3307/zhonghuarensheng?characterEncoding=utf-8&useSSL=false
+        username: root
+    jackson:
+      time-zone: GMT+8
+    resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/
+    mvc:
+      static-path-pattern: /**
+logging:
+  level:
+    com.rensheng.zhonghuarensheng.mapper: debug

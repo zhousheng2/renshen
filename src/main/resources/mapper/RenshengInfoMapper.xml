@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rensheng.zhonghuarensheng.mapper.RenshengInfoMapper">
+  <resultMap id="BaseResultMap" type="com.rensheng.zhonghuarensheng.entity.RenshengInfo">
+    <id column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="product_code" jdbcType="VARCHAR" property="productCode" />
+    <result column="image_code" jdbcType="VARCHAR" property="imageCode" />
+    <result column="product_type" jdbcType="VARCHAR" property="productType" />
+    <result column="product_brand" jdbcType="VARCHAR" property="productBrand" />
+    <result column="product_level" jdbcType="VARCHAR" property="productLevel" />
+    <result column="product_weight" jdbcType="VARCHAR" property="productWeight" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
+    <result column="check_date" jdbcType="DATE" property="checkDate" />
+    <result column="qualified_flag" jdbcType="VARCHAR" property="qualifiedFlag" />
+    <result column="check_result" jdbcType="VARCHAR" property="checkResult" />
+    <result column="product_origin" jdbcType="VARCHAR" property="productOrigin" />
+    <result column="deleted_flag" jdbcType="BIT" property="deletedFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    product_id, product_code, image_code, product_type, product_brand, product_level, product_weight,
+    image_url, check_date,product_origin,
+    qualified_flag, check_result, deleted_flag, create_time, update_time
+  </sql>
+
+  <select id="selectByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from renshen_info
+    where product_code = #{productCode,jdbcType=VARCHAR} and deleted_flag = 0 ORDER BY product_id desc LIMIT 1
+  </select>
+
+
+
+
+
+
+
+  <select id="findAll" parameterType="com.rensheng.zhonghuarensheng.entity.RenshengInfo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from renshen_info
+    where deleted_flag = #{deletedFlag,jdbcType=BIT}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from renshen_info
+    where product_id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <delete id="updateDeletedByPrimaryKey" parameterType="java.lang.Integer">
+    update renshen_info
+    set deleted_flag = 1
+    where product_id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insertSelective" keyColumn="id" keyProperty="id"
+          parameterType="com.rensheng.zhonghuarensheng.entity.RenshengInfo" useGeneratedKeys="true">
+    insert into renshen_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rsCode != null">
+        rs_code,
+      </if>
+      <if test="rsImageCode != null">
+        rs_image_code,
+      </if>
+      <if test="rsType != null">
+        rs_type,
+      </if>
+      <if test="rsBrand != null">
+        rs_brand,
+      </if>
+      <if test="rsLevel != null">
+        rs_level,
+      </if>
+      <if test="rsWeight != null">
+        rs_weight,
+      </if>
+      <if test="rsUrl != null">
+        rs_url,
+      </if>
+      <if test="checkTime != null">
+        check_time,
+      </if>
+      <if test="qualifiedFlag != null">
+        qualified_flag,
+      </if>
+      <if test="rsResult != null">
+        rs_result,
+      </if>
+      <if test="deletedFlag != null">
+        deleted_flag,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rsCode != null">
+        #{rsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="rsImageCode != null">
+        #{rsImageCode,jdbcType=VARCHAR},
+      </if>
+      <if test="rsType != null">
+        #{rsType,jdbcType=VARCHAR},
+      </if>
+      <if test="rsBrand != null">
+        #{rsBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="rsLevel != null">
+        #{rsLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="rsWeight != null">
+        #{rsWeight,jdbcType=VARCHAR},
+      </if>
+      <if test="rsUrl != null">
+        #{rsUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="checkTime != null">
+        #{checkTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qualifiedFlag != null">
+        #{qualifiedFlag,jdbcType=BIT},
+      </if>
+      <if test="rsResult != null">
+        #{rsResult,jdbcType=VARCHAR},
+      </if>
+      <if test="deletedFlag != null">
+        #{deletedFlag,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.rensheng.zhonghuarensheng.entity.RenshengInfo">
+    update renshen_info
+    <set>
+      <if test="rsCode != null">
+        rs_code = #{rsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="rsImageCode != null">
+        rs_image_code = #{rsImageCode,jdbcType=VARCHAR},
+      </if>
+      <if test="rsType != null">
+        rs_type = #{rsType,jdbcType=VARCHAR},
+      </if>
+      <if test="rsBrand != null">
+        rs_brand = #{rsBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="rsLevel != null">
+        rs_level = #{rsLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="rsWeight != null">
+        rs_weight = #{rsWeight,jdbcType=VARCHAR},
+      </if>
+      <if test="rsUrl != null">
+        rs_url = #{rsUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="checkTime != null">
+        check_time = #{checkTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qualifiedFlag != null">
+        qualified_flag = #{qualifiedFlag,jdbcType=BIT},
+      </if>
+      <if test="rsResult != null">
+        rs_result = #{rsResult,jdbcType=VARCHAR},
+      </if>
+      <if test="deletedFlag != null">
+        deleted_flag = #{deletedFlag,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

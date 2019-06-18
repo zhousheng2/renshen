@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no,minimal-ui">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+	<title>吉林省野生资源开发中心</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/css/layout.css" />
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+<body>
+	
+	<!-- 查询首页 -->
+	<section id="home-layout" class="home-layout">
+		<div class="home-title">
+			<img src="/images/logo.png" alt="log">
+		</div>
+		<div id="home-search" class="home-search">
+			<div class="home-search-input">
+				<input id="search-input" name="search" type="text" placeholder="请输入要查询的产品编号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+			</div>
+			<div id="search-button" class="home-search-button">
+				<img src="/images/search.png" alt="search">
+			</div>
+		</div>
+		<div id="home-tip" class="home-tip">
+			<p>对不起，您输入的产品编号有误</p>
+			<p>或者您所查询的产品信息未录入</p>
+		</div>
+		<div class="home-footer">
+			<p>© 2019 吉林省野生资源开发中心 版权所有，并保留所有权利</p>
+			<p>吉林省野生资源开发中心</p>
+		</div>
+	</section>
+
+	<!-- 查询详情 -->
+	<section id="detail-layout" class="detail-layout">
+		<div class="detail-head">
+			<div class="detail-head-frame">
+				<div class="detail-head-title">
+					<span>吉林省野生资源开发中心</span>
+				</div>
+				<div id="go-home" class="detail-head-home">
+					<span>返回首页</span>
+				</div>
+			</div>
+		</div>
+		<div id="result" class="detail-result"></div>
+	</section>
+
+	<script type="text/javascript" src="/js/common.js"></script>
+</body>
+</html>

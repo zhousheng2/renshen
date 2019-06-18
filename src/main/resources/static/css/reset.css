@@ -1,0 +1,102 @@
+@charset "utf-8";
+html {
+  color: #333;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	font-family: "Microsoft YaHei", -apple-system-font, "Helvetica Neue", "Helvetica", sans-serif;
+  background-color: #FAFAFA;
+}
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td,hr,button,footer,header,section,canvas {
+  margin: 0;
+  padding: 0;
+}
+
+input,select,textarea,button {
+  font-size: 100%;
+  outline: 0 none;
+  border: none;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  margin: 0;
+  border: 0;
+  vertical-align: middle;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  outline: medium none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+ol,ul,li {
+  list-style: none;
+}
+
+caption,th {
+  text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: 100%;
+  font-weight: 500
+}
+
+header,footer,section {
+  display: block;
+}
+
+audio,canvas,video {
+  display: inline-block;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+	-webkit-appearance: none !important;
+	margin: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button{
+  -webkit-appearance: none;
+}
+
+input::-webkit-input-placeholder{
+  font-size: 14px;
+  color: #bfbfbf;
+}
+
+input::-moz-placeholder {
+  font-size: 14px;
+  color: #bfbfbf;
+}
+
+input:-moz-placeholder {
+  font-size: 14px;
+  color: #bfbfbf;
+}
+
+input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #bfbfbf;
+}
+
+textarea {
+  resize : none;
+}
