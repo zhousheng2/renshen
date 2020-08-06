@@ -1,15 +1,16 @@
-package com.rensheng.zhonghuarensheng;
+package com.renshen;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.rensheng.zhonghuarensheng.mapper")
-public class RenshengApplication {
+@MapperScan(basePackages = "com.renshen.mapper")
+public class RenshenApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RenshengApplication.class, args);
+        SpringApplication.run(RenshenApplication.class, args);
     }
+
 
 }

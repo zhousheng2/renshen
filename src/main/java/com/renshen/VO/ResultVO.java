@@ -1,4 +1,4 @@
-package com.rensheng.zhonghuarensheng.VO;
+package com.renshen.VO;
 
 import lombok.Data;
 

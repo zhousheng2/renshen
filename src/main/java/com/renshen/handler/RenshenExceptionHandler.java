@@ -1,26 +1,25 @@
-package com.rensheng.zhonghuarensheng.handler;
+package com.renshen.handler;
 
-import com.rensheng.zhonghuarensheng.VO.ResultVO;
-import com.rensheng.zhonghuarensheng.exception.RenshengException;
-import com.rensheng.zhonghuarensheng.exception.ResponseBankException;
-import com.rensheng.zhonghuarensheng.utils.ResultVOUtil;
+import com.renshen.exception.RenshenException;
+import com.renshen.exception.ResponseBankException;
+import com.renshen.VO.ResultVO;
+import com.renshen.utils.ResultVOUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author zhousheng
  * @date 2019-06-15 19:07
  */
 @ControllerAdvice
-public class RenshengExceptionHandler {
+public class RenshenExceptionHandler {
 
-    @ExceptionHandler(value = RenshengException.class)
+    @ExceptionHandler(value = RenshenException.class)
     @ResponseBody
-    public ResultVO handlerRenshengException(RenshengException e) {
+    public ResultVO handlerRenshengException(RenshenException e) {
         return ResultVOUtil.error(e.getCode(), e.getMessage());
     }
 

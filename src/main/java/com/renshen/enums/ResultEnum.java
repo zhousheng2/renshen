@@ -1,4 +1,4 @@
-package com.rensheng.zhonghuarensheng.enums;
+package com.renshen.enums;
 
 import lombok.Getter;
 

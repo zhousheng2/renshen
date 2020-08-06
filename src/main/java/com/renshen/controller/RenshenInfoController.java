@@ -1,21 +1,15 @@
-package com.rensheng.zhonghuarensheng.controller;
+package com.renshen.controller;
 
-import com.rensheng.zhonghuarensheng.VO.ResultVO;
-import com.rensheng.zhonghuarensheng.entity.RenshengInfo;
-import com.rensheng.zhonghuarensheng.enums.ResultEnum;
-import com.rensheng.zhonghuarensheng.exception.RenshengException;
-import com.rensheng.zhonghuarensheng.service.RenshengInfoService;
-import com.rensheng.zhonghuarensheng.utils.ResultVOUtil;
+import com.renshen.VO.ResultVO;
+import com.renshen.entity.RenshenInfo;
+import com.renshen.service.RenshenInfoService;
+import com.renshen.utils.ResultVOUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-
-import java.util.Map;
 
 /**
  * @author zhousheng
@@ -25,7 +19,7 @@ import java.util.Map;
 @RequestMapping("/renshenInfo")
 public class RenshenInfoController {
     @Autowired
-    private RenshengInfoService renshengInfoService;
+    private RenshenInfoService renshengInfoService;
 
 
     /**
@@ -34,9 +28,9 @@ public class RenshenInfoController {
      * @return
      */
     @GetMapping("/detail")
-    public ResultVO<RenshengInfo> getRenshenInfoDetail(
+    public ResultVO<RenshenInfo> getRenshenInfoDetail(
             @RequestParam(value = "productCode", required = true) String productCode) throws Exception{
-        RenshengInfo renshengInfo = null;
+        RenshenInfo renshengInfo = null;
         if (!StringUtils.isEmpty(productCode)) {
             renshengInfo = renshengInfoService.selectByCode(productCode);
         }

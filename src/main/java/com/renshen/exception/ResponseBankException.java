@@ -1,4 +1,4 @@
-package com.rensheng.zhonghuarensheng.exception;
+package com.renshen.exception;
 
 /**
  * @author zhousheng

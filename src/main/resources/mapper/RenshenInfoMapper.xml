@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.rensheng.zhonghuarensheng.mapper.RenshengInfoMapper">
-  <resultMap id="BaseResultMap" type="com.rensheng.zhonghuarensheng.entity.RenshengInfo">
+<mapper namespace="com.renshen.mapper.RenshenInfoMapper">
+  <resultMap id="BaseResultMap" type="com.renshen.entity.RenshenInfo">
     <id column="product_id" jdbcType="INTEGER" property="productId" />
     <result column="product_code" jdbcType="VARCHAR" property="productCode" />
     <result column="image_code" jdbcType="VARCHAR" property="imageCode" />
@@ -38,7 +38,7 @@
 
 
 
-  <select id="findAll" parameterType="com.rensheng.zhonghuarensheng.entity.RenshengInfo" resultMap="BaseResultMap">
+  <select id="findAll" parameterType="com.renshen.entity.RenshenInfo" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from renshen_info
@@ -57,7 +57,7 @@
   </delete>
 
   <insert id="insertSelective" keyColumn="id" keyProperty="id"
-          parameterType="com.rensheng.zhonghuarensheng.entity.RenshengInfo" useGeneratedKeys="true">
+          parameterType="com.renshen.entity.RenshenInfo" useGeneratedKeys="true">
     insert into renshen_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="rsCode != null">
@@ -144,7 +144,7 @@
   </insert>
 
 
-  <update id="updateByPrimaryKeySelective" parameterType="com.rensheng.zhonghuarensheng.entity.RenshengInfo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.renshen.entity.RenshenInfo">
     update renshen_info
     <set>
       <if test="rsCode != null">

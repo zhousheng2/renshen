@@ -1,7 +1,7 @@
-package com.rensheng.zhonghuarensheng.utils;
+package com.renshen.utils;
 
-import com.rensheng.zhonghuarensheng.VO.ResultVO;
-import com.rensheng.zhonghuarensheng.enums.ResultEnum;
+import com.renshen.VO.ResultVO;
+import com.renshen.enums.ResultEnum;
 
 /**
  * @author zhousheng

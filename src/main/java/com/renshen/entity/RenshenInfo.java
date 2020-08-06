@@ -1,4 +1,4 @@
-package com.rensheng.zhonghuarensheng.entity;
+package com.renshen.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RenshengInfo implements Serializable {
+public class RenshenInfo implements Serializable {
 
     private static final long serialVersionUID = 2492807547107043270L;
 

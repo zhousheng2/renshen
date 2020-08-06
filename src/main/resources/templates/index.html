@@ -6,13 +6,13 @@
 	<meta name="screen-orientation" content="portrait">
 	<meta name="full-screen" content="yes">
 	<meta name="x5-orientation" content="portrait">
-  <meta name="x5-fullscreen" content="true">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
 	<title>吉林省野生资源开发中心</title>
 	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="/css/layout.css" />
@@ -20,7 +20,7 @@
 </head>
 <body>
 	
-	<!-- 查询首页 -->
+	<!-- PC端查询首页 -->
 	<section id="home-layout" class="home-layout">
 		<div class="home-title">
 			<img src="/images/logo.png" alt="log">
@@ -43,7 +43,7 @@
 		</div>
 	</section>
 
-	<!-- 查询详情 -->
+	<!-- PC端查询详情 -->
 	<section id="detail-layout" class="detail-layout">
 		<div class="detail-head">
 			<div class="detail-head-frame">
@@ -58,6 +58,45 @@
 		<div id="result" class="detail-result"></div>
 	</section>
 
+	<!-- WAP端查询首页 -->
+	<section id="wap-home-layout" class="wap-home-layout">
+		<div class="wap-home-title">
+			<img src="/images/logo.png" alt="log">
+		</div>
+		<div id="wap-home-search" class="wap-home-search">
+			<div class="wap-home-search-input">
+				<input id="wap-search-input" name="search" type="text" placeholder="请输入要查询的产品编号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+			</div>
+			<div id="wap-search-button" class="wap-home-search-button">
+				<img src="/images/search.png" alt="search">
+			</div>
+		</div>
+		<div id="wap-home-tip" class="wap-home-tip">
+			<p>对不起，您输入的产品编号有误</p>
+			<p>或者您所查询的产品信息未录入</p>
+		</div>
+		<div class="wap-home-footer">
+			<p>© 2019 吉林省野生资源开发中心 版权所有，并保留所有权利</p>
+			<p>吉林省野生资源开发中心</p>
+		</div>
+	</section>
+
+	<!-- WAP端查询详情 -->
+	<section id="wap-detail-layout" class="wap-detail-layout">
+		<div class="wap-detail-head">
+			<div class="wap-detail-head-title">
+				<span>吉林省野生资源开发中心</span>
+			</div>
+		</div>
+		<div id="wap-go-home" class="wap-detail-head-home">
+			<div class="wap-detail-head-home-button">
+				<span>返回首页</span>
+			</div>
+		</div>
+		<div id="wap-result" class="wap-detail-result"></div>
+	</section>
+
 	<script type="text/javascript" src="/js/common.js"></script>
+
 </body>
 </html>
