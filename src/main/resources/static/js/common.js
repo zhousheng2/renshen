@@ -1,3 +1,6 @@
+var baseUrl_dev = "http://127.0.0.1:9000/"
+var baseUrl_test = "http://192.168.126.101:9000/"
+var baseUrl_prod = "http://119.28.8.143:9000/"
 $(function() {
   var onload = function() {
   	// 客户端环境验证
@@ -10,7 +13,8 @@ $(function() {
 				if (inputValue.length > 0) {
 					$.ajax({
 						type: "GET",
-						url: "http://119.28.8.143:9000/renshenInfo/detail",
+						url: baseUrl_prod+"renshenInfo/detail",
+						// url: baseUrl_test+"renshenInfo/detail",
 						data: {productCode: inputValue},
 						dataType: "json",
 						success: function(res){
@@ -33,7 +37,7 @@ $(function() {
 	              html += '</div>';
 	              html += '<div class="wap-detail-column-half">';
 	              html += '<div class="wap-detail-label">';
-	              html += '<span>鉴定日期</span>';
+	              html += '<span>日期</span>';
 	              html += '</div>';
 	              html += '<div class="wap-detail-value">';
 	              html += '<span>' + res.data.checkDate + '</span>';
@@ -43,7 +47,7 @@ $(function() {
 	              html += '<div class="wap-detail-row">';
 	              html += '<div class="wap-detail-column-all">';
 	              html += '<div class="wap-detail-label">';
-	              html += '<span>鉴定结论</span>';
+	              html += '<span>注</span>';
 	              html += '</div>';
 	              html += '<div class="wap-detail-value">';
 	              html += '<span>' + res.data.checkResult + '</span>';
@@ -57,7 +61,7 @@ $(function() {
 	              html += '</div>';
 	              html += '<div class="wap-detail-image-content">';
 	              // html += '<img src="http://116.62.51.46:9000/images/' + res.data.imageUrl + '" onerror="javascript:this.src=\'baseurl/images/default.jpg\'" alt="goods">';
-	              // html += '<img src="http://127.0.0.1:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
+	              // html += '<img src="http://192.168.126.101:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
 	              html += '<img src="http://119.28.8.143:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
 	              html += '</div>';
 	              html += '</div>';
@@ -68,7 +72,7 @@ $(function() {
 	              html += '<div class="wap-detail-row wap-row-border">';
 	              html += '<div class="wap-detail-column-half">';
 	              html += '<div class="wap-detail-label">';
-	              html += '<span>种类</span>';
+	              html += '<span>品名</span>';
 	              html += '</div>';
 	              html += '<div class="wap-detail-value">';
 	              html += '<span>' + res.data.productType + '</span>';
@@ -121,7 +125,7 @@ $(function() {
 	          		}, 1500);
 	          	}
 	          },
-	          error: function(){            	
+	          error: function(){
 	            alert("请求服务器失败");
 	          }
 		      });
@@ -145,7 +149,8 @@ $(function() {
 				if (inputValue.length > 0) {
 					$.ajax({
 	          type: "GET",
-	          url: "http://119.28.8.143:9000/renshenInfo/detail",
+	          url: baseUrl_prod+"renshenInfo/detail",
+	          // url: baseUrl_test+"renshenInfo/detail",
 	          data: {productCode: inputValue},
 	          dataType: "json",
 	          success: function(res){
@@ -168,7 +173,7 @@ $(function() {
 	              html += '</div>';
 	              html += '<div class="detail-column-half">';
 	              html += '<div class="detail-label border-right">';
-	              html += '<span>鉴定日期</span>';
+	              html += '<span>日期</span>';
 	              html += '</div>';
 	              html += '<div class="detail-value">';
 	              html += '<span>' + res.data.checkDate + '</span>';
@@ -178,7 +183,7 @@ $(function() {
 	              html += '<div class="detail-row">';
 	              html += '<div class="detail-column-all">';
 	              html += '<div class="detail-label">';
-	              html += '<span>鉴定结论</span>';
+	              html += '<span>注</span>';
 	              html += '</div>';
 	              html += '<div class="detail-value">';
 	              html += '<span>' + res.data.checkResult + '</span>';
@@ -192,7 +197,7 @@ $(function() {
 	              html += '</div>';
 	              html += '<div class="detail-image-content">';
 	              // html += '<img src="http://116.62.51.46:9000/images/' + res.data.imageUrl + '" onerror="javascript:this.src=\'baseurl/images/default.jpg\'" alt="goods">';
-	              // html += '<img src="http://127.0.0.1:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
+	              // html += '<img src="http://192.168.126.101:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
 	              html += '<img src="http://119.28.8.143:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
 	              html += '</div>';
 	              html += '</div>';
@@ -203,7 +208,7 @@ $(function() {
 	              html += '<div class="detail-row row-border">';
 	              html += '<div class="detail-column-half">';
 	              html += '<div class="detail-label">';
-	              html += '<span>种类</span>';
+	              html += '<span>品名</span>';
 	              html += '</div>';
 	              html += '<div class="detail-value">';
 	              html += '<span>' + res.data.productType + '</span>';
@@ -256,7 +261,7 @@ $(function() {
 	          		}, 1500);
 	          	}
 	          },
-	          error: function(){            	
+	          error: function(){
 	            alert("请求服务器失败");
 	          }
 		      });
