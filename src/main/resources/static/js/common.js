@@ -1,6 +1,6 @@
-var baseUrl_dev = "http://127.0.0.1:9000/"
-var baseUrl_test = "http://192.168.126.101:9000/"
-var baseUrl_prod = "http://119.28.8.143:9000/"
+// var baseUrl = "http://127.0.0.1:9000/"
+// var baseUrl = "http://192.168.126.101:9000/"
+var baseUrl = "http://119.28.8.143:9000/"
 $(function() {
   var onload = function() {
   	// 客户端环境验证
@@ -13,8 +13,7 @@ $(function() {
 				if (inputValue.length > 0) {
 					$.ajax({
 						type: "GET",
-						url: baseUrl_prod+"renshenInfo/detail",
-						// url: baseUrl_test+"renshenInfo/detail",
+						url: baseUrl+"renshenInfo/detail",
 						data: {productCode: inputValue},
 						dataType: "json",
 						success: function(res){
@@ -149,8 +148,7 @@ $(function() {
 				if (inputValue.length > 0) {
 					$.ajax({
 	          type: "GET",
-	          url: baseUrl_prod+"renshenInfo/detail",
-	          // url: baseUrl_test+"renshenInfo/detail",
+	          url: baseUrl+"renshenInfo/detail",
 	          data: {productCode: inputValue},
 	          dataType: "json",
 	          success: function(res){
