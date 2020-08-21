@@ -1,6 +1,6 @@
 // var baseUrl = "http://127.0.0.1:9000/"
 // var baseUrl = "http://192.168.126.101:9000/"
-var baseUrl = "http://119.28.8.143:9000/"
+var baseUrl = "http://119.28.8.143:80/"
 $(function() {
   var onload = function() {
   	// 客户端环境验证
@@ -61,7 +61,7 @@ $(function() {
 	              html += '<div class="wap-detail-image-content">';
 	              // html += '<img src="http://116.62.51.46:9000/images/' + res.data.imageUrl + '" onerror="javascript:this.src=\'baseurl/images/default.jpg\'" alt="goods">';
 	              // html += '<img src="http://192.168.126.101:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
-	              html += '<img src="http://119.28.8.143:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
+	              html += '<img src="http://119.28.8.143:80/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
 	              html += '</div>';
 	              html += '</div>';
 	              html += '<div class="wap-detail-goods">';
@@ -196,7 +196,7 @@ $(function() {
 	              html += '<div class="detail-image-content">';
 	              // html += '<img src="http://116.62.51.46:9000/images/' + res.data.imageUrl + '" onerror="javascript:this.src=\'baseurl/images/default.jpg\'" alt="goods">';
 	              // html += '<img src="http://192.168.126.101:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
-	              html += '<img src="http://119.28.8.143:9000/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
+	              html += '<img src="http://119.28.8.143:80/' + res.data.imageUrl + '" onerror="javascript:this.src=\'/images/default.jpg\'" alt="goods">';
 	              html += '</div>';
 	              html += '</div>';
 	              html += '<div class="detail-goods">';
