@@ -1,8 +1,11 @@
 spring:
   datasource:
-    url: jdbc:mysql://192.168.126.101:3306/renshen?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+#    url: jdbc:mysql://192.168.126.101:3306/renshen?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+#    username: root
+#    password: root
+    url: jdbc:mysql://119.28.8.143:3306/renshen?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: yangjia*&^%$#@2020
   resources:
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/,file:E:/images/
 logging:
