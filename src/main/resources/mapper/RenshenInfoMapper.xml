@@ -14,6 +14,7 @@
     <result column="qualified_flag" jdbcType="VARCHAR" property="qualifiedFlag" />
     <result column="check_result" jdbcType="VARCHAR" property="checkResult" />
     <result column="product_origin" jdbcType="VARCHAR" property="productOrigin" />
+    <result column="product_price" jdbcType="DECIMAL" property="productPrice" />
     <result column="deleted_flag" jdbcType="BIT" property="deletedFlag" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -27,7 +28,19 @@
 
   <select id="selectByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
-    <include refid="Base_Column_List" />
+        product_id,
+        product_code,
+        image_code,
+        product_type,
+        product_brand,
+        product_level,
+        product_weight,
+        image_url,
+        check_date,
+        product_origin,
+        qualified_flag,
+        check_result,
+        product_price
     from renshen_info
     where product_code = #{productCode,jdbcType=VARCHAR} and deleted_flag = 0 ORDER BY product_id desc LIMIT 1
   </select>

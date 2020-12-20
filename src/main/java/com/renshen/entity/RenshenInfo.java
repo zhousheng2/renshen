@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -82,7 +83,12 @@ public class RenshenInfo implements Serializable {
     /**
      * 删除标识
      */
-    private Boolean deletedFlag;
+    private boolean deletedFlag;
+
+    /**
+     * 统一零售价
+     */
+    private String productPrice;
 
     /**
      * 创建时间

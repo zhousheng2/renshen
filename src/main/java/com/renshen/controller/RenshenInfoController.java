@@ -29,7 +29,7 @@ public class RenshenInfoController {
      */
     @GetMapping("/detail")
     public ResultVO<RenshenInfo> getRenshenInfoDetail(
-            @RequestParam(value = "productCode", required = true) String productCode) throws Exception{
+            @RequestParam(value = "productCode", required = true) String productCode){
         RenshenInfo renshengInfo = null;
         if (!StringUtils.isEmpty(productCode)) {
             renshengInfo = renshengInfoService.selectByCode(productCode);

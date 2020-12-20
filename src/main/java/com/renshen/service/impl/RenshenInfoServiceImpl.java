@@ -20,6 +20,18 @@ public class RenshenInfoServiceImpl implements RenshenInfoService {
     private RenshenInfoMapper renshengInfoMapper;
 
     @Override
+    public RenshenInfo selectByCode(String productCode) {
+        RenshenInfo renshengInfo= renshengInfoMapper.selectByCode(productCode);
+        if (renshengInfo == null) {
+            throw new RenshenException(ResultEnum.RENSHENG_NOT_EXIST);
+        }
+        return renshengInfo;
+    }
+
+
+
+
+    @Override
     public int deleteByPrimaryKey(Integer id) throws Exception {
         return renshengInfoMapper.deleteByPrimaryKey(id);
     }
@@ -37,15 +49,6 @@ public class RenshenInfoServiceImpl implements RenshenInfoService {
     @Override
     public List<RenshenInfo> findAll(RenshenInfo renshengInfo) throws Exception {
         return renshengInfoMapper.findAll(renshengInfo);
-    }
-
-    @Override
-    public RenshenInfo selectByCode(String productCode) throws Exception {
-        RenshenInfo renshengInfo= renshengInfoMapper.selectByCode(productCode);
-        if (renshengInfo == null) {
-            throw new RenshenException(ResultEnum.RENSHENG_NOT_EXIST);
-        }
-        return renshengInfo;
     }
 
     @Override

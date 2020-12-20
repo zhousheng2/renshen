@@ -9,10 +9,15 @@ import lombok.Getter;
 @Getter
 public enum ResultEnum {
 
+    /**
+     * 成功
+     */
     SUCCESS(1000, "成功"),
 
-
-    RENSHENG_NOT_EXIST(1001, "产品不存在")
+    /**
+     * 产品不存在
+     */
+    RENSHENG_NOT_EXIST(1001, "产品不存在!")
 
 
     ;

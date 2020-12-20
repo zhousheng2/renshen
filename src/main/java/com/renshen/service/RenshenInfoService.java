@@ -10,6 +10,20 @@ import java.util.List;
  */
 public interface RenshenInfoService {
 
+
+    /**
+     * 根据商品编号查询商品
+     *
+     * @param productCode
+     * @return
+     * @throws Exception
+     */
+    RenshenInfo selectByCode(String productCode);
+
+
+
+
+
     int deleteByPrimaryKey(Integer id) throws Exception;
 
     int updateDeletedByPrimaryKey(Integer id) throws Exception;
@@ -17,8 +31,6 @@ public interface RenshenInfoService {
     int insertSelective(RenshenInfo record) throws Exception;
 
     List<RenshenInfo> findAll(RenshenInfo renshengInfo) throws Exception;
-
-    RenshenInfo selectByCode(String productCode)throws Exception;
 
     int updateByPrimaryKeySelective(RenshenInfo record) throws Exception;
 }
