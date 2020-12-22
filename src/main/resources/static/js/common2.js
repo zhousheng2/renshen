@@ -1,4 +1,4 @@
-// var baseUrl = "http://127.0.0.1:8000/"
+// var baseUrl = "http://192.168.124.19:80/"
 // var baseUrl = "http://192.168.126.101:80/"
 var baseUrl = "http://119.28.8.143:80/"
 $(function() {
@@ -35,7 +35,7 @@ $(function() {
 	              html += '</div>';
 	              html += '</div>';
 	              html += '<div class="wap-detail-column-half">';
-	              html += '<div class="wap-detail-label">';
+	              html += '<div class="wap-detail-label row-border-label-blue">';
 	              html += '<span>日期</span>';
 	              html += '</div>';
 	              html += '<div class="wap-detail-value">';
@@ -44,11 +44,11 @@ $(function() {
 	              html += '</div>';
 	              html += '</div>';
                     html += '<div class="wap-detail-row row-border-blue">';
-                    html += '<div class="wap-detail-column-all">';
+                    html += '<div class="wap-detail-column-all-blue">';
                     html += '<div class="wap-detail-label-blue">';
-                    html += '<span class="wap-span-blue">全国统一零售价</span>';
+                    html += '<span class="wap-span-blue">统一零售价</span>';
                     html += '</div>';
-                    html += '<div class="wap-detail-value">';
+                    html += '<div class="wap-detail-value-blue">';
                     html += '<span>' + res.data.productPrice + '</span>';
                     html += '</div>';
                     html += '</div>';
