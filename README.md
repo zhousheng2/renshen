@@ -7,5 +7,9 @@
 
 Test环境启动:  
 java -jar -Dfile.encoding=UTF-8 -Dspring.profiles.active=test renshen.jar  
-后台启动：  
+Test环境后台启动：  
 nohup java -jar -Dfile.encoding=UTF-8 -Dspring.profiles.active=test renshen.jar >/dev/null 2>&1 &
+
+生产环境启动：
+cd /opt/apps
+nohup java -jar -Dfile.encoding=UTF-8 -Dspring.profiles.active=prod renshen.jar >/dev/null 2>&1 &
